@@ -850,6 +850,8 @@ button {
   padding: 15px 15px;
   border-bottom: 1px solid #dcdfde;
   margin: 0 -15px;
+  text-decoration: none;
+  display: block;
 }
 
 .modify_row {
