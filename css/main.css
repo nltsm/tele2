@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: 'Tele2TextSansWebSHORT-Regular';
-  src: url('T../fonts/ele2TextSansWebSHORT-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Tele2TextSansWebSHORT-Regular.woff') format('woff'), url('../fonts/Tele2TextSansWebSHORT-Regular.ttf') format('truetype'), url('../fonts/Tele2TextSansWebSHORT-Regular.svg#Tele2TextSansWebSHORT-Regular') format('svg');
+  src: url('../fonts/Tele2TextSansWebSHORT-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Tele2TextSansWebSHORT-Regular.woff') format('woff'), url('../fonts/Tele2TextSansWebSHORT-Regular.ttf') format('truetype'), url('../fonts/Tele2TextSansWebSHORT-Regular.svg#Tele2TextSansWebSHORT-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -523,6 +523,22 @@ button {
 .dealer-content p a {
   color: #000000;
   text-decoration: none;
+}
+
+#dealer-button {
+  display: none;
+}
+
+#dealer-button.active {
+  display: block;
+}
+
+#dealer-content .news_item {
+  display: none;
+}
+
+#dealer-content .news_item.active {
+  display: block;
 }
 
 .dealer-select {

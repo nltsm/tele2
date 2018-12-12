@@ -39,6 +39,43 @@ app.addModule('datepicker', function () {
 		});
 	}
 });
+app.addModule('dealer', function () {
+	var self = this;
+	
+	this.init = function () {
+		this.initSpoiler();
+		
+		$('#dealer-button').click(function (e) {
+			e.preventDefault();
+			
+			self.changeSpoiler();
+		});
+	};
+	
+	this.initSpoiler = function () {
+		var items = $('#dealer-content .news_item');
+		items.filter(':lt(5)').addClass('active');
+		var itemsNotActive = $('.dealer-content .news_item:not(.active):lt(5)');
+		
+		if (itemsNotActive.length) {
+			$('#dealer-button').addClass('active');
+		} else {
+			$('#dealer-button').removeClass('active');
+		}
+	};
+	
+	this.changeSpoiler = function () {
+		var items = $('.dealer-content .news_item:not(.active):lt(5)');;
+		items.addClass('active');
+		var itemsNotActive = $('.dealer-content .news_item:not(.active):lt(5)');
+		
+		if (itemsNotActive.length) {
+			$('#dealer-button').addClass('active');
+		} else {
+			$('#dealer-button').removeClass('active');
+		}
+	};
+});
 app.addModule('mobile-load', function () {
 	this.init = function () {
 		$('[data-clone-id]').each(function () {
