@@ -650,6 +650,45 @@ button {
   right: 0;
 }
 
+.game {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.game_image {
+  width: 100%;
+  text-align: center;
+  padding-right: 0;
+  margin-bottom: 25px;
+}
+
+.game_image img {
+  border-radius: 15px;
+  border: 1px solid #eee;
+}
+
+.game_content {
+  width: 100%;
+}
+
+.game_title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.game_title.__cloned {
+  display: none;
+}
+
+.game_text {
+  font-size: 15px;
+  line-height: 24px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
 .header {
   padding: 8px 0;
   border-bottom: 1px solid #d7d8d5;
