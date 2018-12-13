@@ -153,6 +153,51 @@ app.addModule('popup', function () {
 		});
 	};
 });
+app.addModule('spoiler', function () {
+	var self = this;
+	var tabBlock = $('#tab-block');
+	
+	this.init = function () {
+		this.initSpoiler();
+	};
+	
+	this.initSpoiler = function () {
+		tabBlock.find('.tab').each(function () {
+			var tab = $(this);
+			var items = tab.find('.media_item:not(.active):lt(5), .news_item:not(.active):lt(5)');
+			
+			items.addClass('active');
+			var itemsNotActive = tab.find('.media_item:not(.active):lt(5), .news_item:not(.active):lt(5)');
+			
+			var button = tab.find('.button');
+			
+			if (itemsNotActive.length) {
+				button.addClass('active');
+			} else {
+				button.removeClass('active');
+			}
+			
+			button.on('click', function (e) {
+				e.preventDefault();
+				self.changeSpoiler(tab);
+			});
+		});
+	};
+	this.changeSpoiler = function (tab) {
+		var items = tab.find('.media_item:not(.active):lt(5), .news_item:not(.active):lt(5)');
+		
+		items.addClass('active');
+		var itemsNotActive = tab.find('.media_item:not(.active):lt(5), .news_item:not(.active):lt(5)');
+		
+		var button = tab.find('.button');
+		
+		if (itemsNotActive.length) {
+			button.addClass('active');
+		} else {
+			button.removeClass('active');
+		}
+	};
+});
 app.addModule('tab', function () {
 	this.init = function () {
 		var nav = $('.section .nav a');

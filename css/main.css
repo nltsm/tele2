@@ -1427,6 +1427,30 @@ button {
   display: block;
 }
 
+#tab-block .media_item {
+  display: none;
+}
+
+#tab-block .media_item.active {
+  display: flex;
+}
+
+#tab-block .news_item {
+  display: none;
+}
+
+#tab-block .news_item.active {
+  display: block;
+}
+
+#tab-block .button {
+  display: none;
+}
+
+#tab-block .button.active {
+  display: block;
+}
+
 .training {
   margin: 0 -15px;
   padding: 10px 15px 13px;
